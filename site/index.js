@@ -1,31 +1,22 @@
-const movieListing = document.querySelector('.movieListing')
+const movieListingContainer = document.querySelector('.movieListing')
 
-function addMovieListing(response) {
-    const li = documemt.createElement('li')
+function createMovieListing(movie) {
+    const li = document.createElement('li')
     li.classList.add('movie-listing')
     li.innerHTML = `
-        <a href = "movies.html?movie=${reponse.episode_id}">${response.title}</a>
-        <time>${04/05/2022}</time>
+        <a href = "movies.html?movie=${movie.title}">${movie.title}</a>
+        <time>${movie.release_date}</time>
     `
-    movieListing.append(li)
+    return li
 }
-
-
-
-
-
-
 const url = 'https://swapi.dev/api/films'
-fetch(url) 
+fetch(url)
     .then(response => {
         return response.json()
     }).then(response => {
-        return response.results.map(result => {
-            return result
-    })
-    }).then(responses => {
-        responses.forEach(response => {
-            addMovieListing(response)
+        return response.results.map(createMovieListing)
+    }).then(movieListings => {
+        movieListings.forEach(movieListing => {
+            movieListingContainer.append(movieListing)
         })
     })
-    
