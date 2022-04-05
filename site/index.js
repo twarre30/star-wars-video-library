@@ -51,4 +51,9 @@ fetch(url)
         movieListings.map(movieListing => {
             return movieListing.episode_id
         })
+        .catch((error) => {
+            const $p = document.createElement('p');
+            $p.textContent = "Something went wrong!";
+            document.querySelector('.movieListing').append($p);
+            })
     })

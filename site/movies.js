@@ -70,3 +70,8 @@ fetch(`https://swapi.dev/api/films/${starWarsIds[queryString.get('movie')]}`)
         createMovieListing(movie)
         createCharacterListing(movie)
     })
+    .catch((error) => {
+            const $p = document.createElement('p');
+            $p.textContent = "Something went wrong!";
+            document.querySelector('.movie').append($p);
+            })
