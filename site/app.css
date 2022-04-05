@@ -1,17 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
 body {
     background-image: url("space.png");
-    color: white;
+    color: yellow;
+    font-family: 'Space Mono';
+    display: block;
 }
 
 a {
+    color: yellow;
     text-decoration: none;
-    color: white;
+    display: block;
+    text-align: center;
 }
 
 h1 {
-    text-align: center;  
+    text-align: center;
+}
+
+h1 a {
+    text-align: center;
+    color: yellow;
+    text-decoration: none;
 }
 
 h2 {
+    display: block;
     text-align: center;
+    margin-bottom: 30px;
+}
+
+img {
+    width: 200px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+time {
+    display: block;
+    text-align: center;
+}
+
+main {
+    display: grid;
+    justify-content: center;
+}
+
+li a {
+    text-decoration: none;
+    color: yellow;
+    display: block;
+}
+
+ul {
+    list-style: none;
+}
+
+.loader {
+    background-color: none;
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hidden {
+    display: none;
 }
