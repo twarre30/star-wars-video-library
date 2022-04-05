@@ -13,6 +13,7 @@ function createMovieListing(movie) {
     div.innerHTML = `
         <a href = 'movies.html?movie=${movie.episode_id}'>${movie.title}</a>
         <time>${movie.release_date}</time>
+        <p>${movie.opening_crawl}</p>
 
         <h2>Characters</h2>
     `
@@ -23,8 +24,8 @@ function createCharacterListing(movie) {
     ul.classList.add('.characters')
     div.append(ul)
     Promise.all(movie.characters
-        .map(url => fetch(url)
-            .then(response => response.json())))
+            .map(url => fetch(url)
+                .then(response => response.json())))
         .then(responses => responses.forEach(response => {
             const li = document.createElement('li')
             li.textContent = `${response.name}`
@@ -39,4 +40,5 @@ fetch(`https://swapi.dev/api/films/${starWarsIds[queryString.get('movie')]}`)
     .then(movie => {
         createMovieListing(movie)
         createCharacterListing(movie)
+        console.log(movie)
     })

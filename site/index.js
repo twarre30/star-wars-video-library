@@ -1,19 +1,40 @@
 const movieListingContainer = document.querySelector('.movieListing')
-// const imdbIDs = [
-//     {4: 'tt0076759'},
-//     {5: 'tt0080684'},
-//     {6: 'tt0086190'},
-//     {1: 'tt0120915'},
-//     {2: 'tt0121765'},
-//     {3: 'tt0121766'},
-// ]
-// const poster = fetch(`http://www.omdbapi.com/?apikey=58f2f297&i=${imdbIDs[4]}`)
-//     .then(response => response.json())
-//     .then(parsedResponse => {
-//         return parsedResponse.Poster
-//     })
+    /*const imdbIDs = [{
+            id: 4,
+            url: 'https://m.media-amazon.com/images/M/MV5BNzVlY2MwMjktM2E4OS00Y2Y3LWE3ZjctYzhkZGM3YzA1ZWM2XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg'
+        },
 
-// console.log(poster)
+        {
+            id: 5,
+            url: 'https://m.media-amazon.com/images/M/MV5BYmU1NDRjNDgtMzhiMi00NjZmLTg5NGItZDNiZjU5NTU4OTE0XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg'
+        },
+        {
+            id: 6,
+            url: 'https://m.media-amazon.com/images/M/MV5BOWZlMjFiYzgtMTUzNC00Y2IzLTk1NTMtZmNhMTczNTk0ODk1XkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg'
+        },
+        {
+            id: 1,
+            url: 'https://m.media-amazon.com/images/M/MV5BYTRhNjcwNWQtMGJmMi00NmQyLWE2YzItODVmMTdjNWI0ZDA2XkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg'
+        },
+        {
+            id: 2,
+            url: 'https://m.media-amazon.com/images/M/MV5BMDAzM2M0Y2UtZjRmZi00MzVlLTg4MjEtOTE3NzU5ZDVlMTU5XkEyXkFqcGdeQXVyNDUyOTg3Njg@._V1_SX300.jpg'
+        },
+        {
+            id: 3,
+            url: 'https://m.media-amazon.com/images/M/MV5BNTc4MTc3NTQ5OF5BMl5BanBnXkFtZTcwOTg0NjI4NA@@._V1_SX300.jpg'
+        },
+    ]
+
+
+    const poster = Promise.all(imdbIDs.map(id => id.url).map(url => {
+        fetch(url).then(repsonse => response.json())
+    })).then(responses => {
+        responses.map(response => response.Poster)
+
+
+    })
+    console.log(poster)*/
 
 
 
@@ -21,9 +42,9 @@ function createMovieListing(movie) {
     const li = document.createElement('li')
     li.classList.add('movie-listing')
     li.innerHTML = `
-        <a href = 'movies.html?movie=${movie.episode_id}'>${movie.title}</a>
-        <time>${movie.release_date}</time>
-    `
+            <a href = 'movies.html?movie=${movie.episode_id}'>${movie.title}</a>
+            <time>${movie.release_date}</time>
+        `
     return li
 }
 const url = 'https://swapi.dev/api/films'
