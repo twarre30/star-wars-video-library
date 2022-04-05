@@ -1,28 +1,28 @@
 const movieListingContainer = document.querySelector('.movieListing')
     /*const imdbIDs = [{
             id: 4,
-            url: 'http://www.omdbapi.com/?apikey=58f2f297&i=tt0076759'
+            url: 'https://m.media-amazon.com/images/M/MV5BNzVlY2MwMjktM2E4OS00Y2Y3LWE3ZjctYzhkZGM3YzA1ZWM2XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg'
         },
 
         {
             id: 5,
-            url: 'http://www.omdbapi.com/?apikey=58f2f297&i=tt0080684'
+            url: 'https://m.media-amazon.com/images/M/MV5BYmU1NDRjNDgtMzhiMi00NjZmLTg5NGItZDNiZjU5NTU4OTE0XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg'
         },
         {
             id: 6,
-            url: 'http://www.omdbapi.com/?apikey=58f2f297&i=tt0086190'
+            url: 'https://m.media-amazon.com/images/M/MV5BOWZlMjFiYzgtMTUzNC00Y2IzLTk1NTMtZmNhMTczNTk0ODk1XkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg'
         },
         {
             id: 1,
-            url: 'http://www.omdbapi.com/?apikey=58f2f297&i=tt0120915'
+            url: 'https://m.media-amazon.com/images/M/MV5BYTRhNjcwNWQtMGJmMi00NmQyLWE2YzItODVmMTdjNWI0ZDA2XkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg'
         },
         {
             id: 2,
-            url: 'http://www.omdbapi.com/?apikey=58f2f297&i=tt0121765'
+            url: 'https://m.media-amazon.com/images/M/MV5BMDAzM2M0Y2UtZjRmZi00MzVlLTg4MjEtOTE3NzU5ZDVlMTU5XkEyXkFqcGdeQXVyNDUyOTg3Njg@._V1_SX300.jpg'
         },
         {
             id: 3,
-            url: 'http://www.omdbapi.com/?apikey=58f2f297&i=tt0121766'
+            url: 'https://m.media-amazon.com/images/M/MV5BNTc4MTc3NTQ5OF5BMl5BanBnXkFtZTcwOTg0NjI4NA@@._V1_SX300.jpg'
         },
     ]
 
