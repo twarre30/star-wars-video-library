@@ -35,7 +35,6 @@ const movieImages = [{
     },
 ]
 
-
 function createMovieListing(movie) {
     div.innerHTML = `
         <a href = 'movies.html?movie=${movie.episode_id}'>${movie.title}</a>
@@ -71,7 +70,7 @@ fetch(`https://swapi.dev/api/films/${starWarsIds[queryString.get('movie')]}`)
         createCharacterListing(movie)
     })
     .catch((error) => {
-            const $p = document.createElement('p');
-            $p.textContent = "Something went wrong!";
-            document.querySelector('.movie').append($p);
-            })
+        const $p = document.createElement('p');
+        $p.textContent = "Something went wrong!";
+        document.querySelector('.movie').append($p);
+    })
